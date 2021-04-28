@@ -49,8 +49,8 @@
     </div>
   </div>
   <% else %>
-  Your Cart is Empty!! 
- <div> Continue Shopping on the <%= link_to 'Home', :root %>
-  </div>
+  <div class="alert alert-warning" role="alert"class="alert-link"><h4>Your Cart is Empty!! 
+ <p> Continue Shopping on the <%=  link_to 'Home', :root %></p>
+  </h4></div>
  <% end %>
 </section>
