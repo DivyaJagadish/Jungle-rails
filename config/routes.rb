@@ -18,6 +18,11 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :create ,:new]
   end
 
+   resources :signup, only: [:new]
+   resources :users, only: [:create]
+   
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
