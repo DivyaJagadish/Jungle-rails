@@ -1,19 +1,15 @@
 
-<h1>Login</h1>
+<h1>Login if Already Registered!</h1>
 
-
-<%= form_for :session, url: '/login' do |form| %>
-
+<%= form_tag '/login' do %>
   <div class="form-group">
-  <%= form.label :"Email" %>
-  <%= form.text_field :email, class: 'form-control' %>
- </div>
- <div class="form-group">
-  <%= form.label :"Password" %>
-  <%= form.text_field :password, class: 'form-control' %>
-</div>
- <div class="form-group">
-  <%= form.submit 'Submit', class: 'btn btn-primary' %>
+   Email:
+   <p class :"form-control"><%= text_field_tag :email %></p>
   </div>
-
+  <div>
+    Password: 
+    <p class :"form -control"type :"password"><%= password_field_tag :password %></p>
+  </div>
+  <%= submit_tag "Submit" , class: "btn btn-primary" %>
 <% end %>
+
