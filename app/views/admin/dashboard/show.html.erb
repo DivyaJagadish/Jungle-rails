@@ -1,5 +1,19 @@
 <h1>Admin::Dashboard</h1>
-<h4>Products For Sale : <%= @countproduct%></h4>
-<h4> Categories for Sale:<%=  @countcategory%></h4>
-
-<%= link_to "Products", root_path, class: 'btn btn-lg btn-primary' %>
+<div class="well">
+<h3>
+  <table class="table table-bordered">
+    <tr>
+    <h3>
+      <td><%= link_to "Products for Sale", root_path %></td>
+      <td><%= @countproduct%></td>
+      </h3>
+    </tr>
+    <tr>
+    <h3>
+    <td><%= link_to 'Categories for Sale ', [:admin, :categories] %></t>
+      <td><%=@countcategory%></td>
+    </h3>
+    </tr>
+  </table>
+</h3>
+</div>
