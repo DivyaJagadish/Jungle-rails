@@ -50,6 +50,7 @@ RSpec.describe User, type: :model do
     expect(@user.errors[:password]).not_to eq([])
     end
  end 
+
  describe '.authenticate_with_credentials' do
     it "Should login with correct credentials" do
      @user = User.new(firstname: "Freddy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "12345asd",password_confirmation:"12345asd")
@@ -62,5 +63,16 @@ RSpec.describe User, type: :model do
      expect(User.authenticate_with_credentials("freddyEddy@gmail.com","12345a5678")).to eq(nil)
     end
 
+    it "Should login if the email has trailing whitespaces" do
+     @user = User.new(firstname: "Freddy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "12345asd",password_confirmation:"12345asd")
+     @user.save
+     expect(User.authenticate_with_credentials("    freddyEddy@gmail.com","12345asd")).not_to eq(nil)
+    end
+
+    it "Should login if email is in uppercase" do
+     @user = User.new(firstname: "Freddy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "12345asd",password_confirmation:"12345asd")
+     @user.save
+     expect(User.authenticate_with_credentials("FREDDYEDDY@gmail.com","12345asd")).not_to eq(nil)
+    end
   end
 end
