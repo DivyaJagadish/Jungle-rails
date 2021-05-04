@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
   it "User shouldn't signup if email all ready exists" do
      @user = User.new(firstname: "Freddy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "12345asd",password_confirmation:"12345asd")
      @user.save
-     @user1 =User.new( firstname: "sandy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "345asd",password_confirmation:"345asd")
+     @user1 =User.new( firstname: "sandy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "345asdrt",password_confirmation:"345asdrt")
      @user1.valid?
      expect(@user1.errors[:email]).not_to eq([])
   end
@@ -38,9 +38,15 @@ RSpec.describe User, type: :model do
 it "emails should be not be case-sensitive" do
      @user = User.new(firstname: "Freddy", lastname: "Eddy", email: "freddyEddy@gmail.com",password: "12345asd",password_confirmation:"12345asd")
      @user.save
-     @user1 =User.new( firstname: "sandy", lastname: "Eddy", email: "FREDDYEDDY@GMAIL.COM",password: "345asd",password_confirmation:"345asd")
+     @user1 =User.new( firstname: "sandy", lastname: "Eddy", email: "FREDDYEDDY@GMAIL.COM",password: "345asdrt",password_confirmation:"345asdrt")
      @user1.valid?
      expect(@user1.errors[:email]).not_to eq([])
   end
+it "Password should have aminimum length of 8" do
+     @user =User.new( firstname: "sandy", lastname: "Eddy", email: "FREDDYEDDY@GMAIL.COM",password: "345er",password_confirmation:"345er")
+     @user.valid?
+     expect(@user.errors[:password]).not_to eq([])
+  end
+
  end 
 end
