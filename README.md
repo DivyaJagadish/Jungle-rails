@@ -1,13 +1,17 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of studying Rails.In this user can browse through the products and place their order. The payment has to be done through a creditcard and on sucessful transaction,order will be placed. Admin users have to login with their userid and Password ,can add new products for sale and also add new categories for sale.
 
-## Additional Steps for Apple M1 Machines
+Captures
 
-1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
-1. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
-1. Remove Gemfile.lock
-1. Replace Gemfile with version provided [here](https://gist.githubusercontent.com/FrancisBourgouin/831795ae12c4704687a0c2496d91a727/raw/ce8e2104f725f43e56650d404169c7b11c33a5c5/Gemfile)
+![Home](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/HomePage.png?raw=true)
+
+![SignUp](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/SignUp.png?raw=true)
+
+![Login](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/Login.png?raw=true)
+
+![MY cart]()
+![Order Placed](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/Order%20Placed.png?raw=true)
 
 ## Setup
 
