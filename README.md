@@ -10,7 +10,7 @@ Captures
 
 ![Login](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/Login.png?raw=true)
 
-![MY cart](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/Order%20Placed.png?raw=true)
+![MY cart](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/CART%20AFTER%20ORDERING.png?raw=true)
 ![Order Placed](https://github.com/DivyaJagadish/Jungle-rails/blob/master/Documents/Order%20Placed.png?raw=true)
 
 ## Setup
